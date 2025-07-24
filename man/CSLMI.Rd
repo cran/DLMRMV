@@ -10,18 +10,20 @@ CSLMI(data, M)
 \item{data}{Dataframe with response variable in 1st column and predictors in others}
 \item{M}{Number of imputations}}
 \value{
-A list containing:
-  \item{Yhat}{Matrix of size n x M with imputed response values.}
+  A list containing:
+  \item{Yhat}{Imputed response values.}
   \item{betahat}{Average regression coefficients across imputations.}
   \item{comm}{Communication cost (number of messages passed).}
+  A list containing the following components:
+  \item{Yhat}{Imputed response vector with missing values filled in.}
+  \item{betahat}{Final regression coefficients.}
 }
 \description{
 Performs multiple imputation and parameter estimation using a consensus-based approach.
-It assumes:
-  - The response variable is in the first column
-  - All other columns are predictors
-  - Missing values are automatically detected
-  - The whole dataset is treated as one block
+  The response variable is in the first column,
+   all other columns are predictors,
+   missing values are automatically detected,
+   the whole dataset is treated as one block.
 }
 \examples{
 set.seed(123)

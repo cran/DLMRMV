@@ -14,7 +14,7 @@
 #' @param M Number of multiple imputations.
 #'
 #' @return A list containing:
-#'   \item{Yhat}{Matrix of size n x M with imputed response values.}
+#'   \item{Yhat}{Imputed response values.}
 #'   \item{betahat}{Average regression coefficients across imputations.}
 #'   \item{comm}{Communication cost (number of messages passed).}
 #' @export
